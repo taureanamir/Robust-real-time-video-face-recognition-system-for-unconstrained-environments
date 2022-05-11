@@ -1,0 +1,73 @@
+Node:
+    bCreateSubDirForOutput: yes
+    sLocation: Location 1
+    sCameraID: '1'
+    sOutputDir: /output/
+    fGpuMemoryFraction: 0.3
+    sConfigOutFile: output_config.yaml
+    slogDir: /output/logs
+    sLogFile: face_access.log
+    sLogFileEntry: entry.log
+    sLogFileExit: exit.log
+    sLogFileOther: door_access.log
+    sCapturedFaceDir: captured_faces
+    bEnableAgeGenderModule: no
+    bEnableTracking: yes
+    bUseYoloV3Tiny: no
+    iProcessingInterval: 3
+iNumCameras: 4
+cam1:
+    sName: Entry
+    iCamNum: '1'
+    sVideoPath: '0'
+    codec: '0'
+    iImgWidth: 1920
+    iImgHeight: 1080
+    sNodeJSPostUrl: http://192.168.5.140:3000
+cam2:
+    sName: Exit
+    iCamNum: '2'
+    sVideoPath: rtsp://admin:csimAIT5706@192.168.6.237/Streamming/Channel1
+    codec: '0'
+    iImgWidth: 1920
+    iImgHeight: 1080
+    sNodeJSPostUrl: http://192.168.5.198:3000
+Debug:
+    bDebugMode: no
+    bDispVideoOutput: no
+    bWriteOutputVideo: no
+    sOutputVideoFile: /output/output_tiny_yolov3.avi
+    bAnalyzeExecTime: no
+Detection:
+    iFaceMinsize: 160
+    enumFaceDetectThreshold: [0.7, 0.8, 0.9]
+    fScaleFactor: 0.709
+    iFaceDetectionInterval: 3
+    iFaceCropSize: 160
+    iFaceCropMargin: 44
+Classification:
+    sFacenetModelCheckpoint: /input/models/face_recognition/20180402-114759
+    sFacenetModelProtobuf: /input/models/face_recognition/20180402-114759/20180402-114759.pb
+    sFaceClassifierModel: /input/models/face_recognition/classifier/aic_classifier_phase16.pkl
+    fFaceConfThreshold: 0.85
+    fFrontalFaceThreshold: 0.35
+    iNumFramesToConfirmIdentity: 3
+Tracker:
+    sDeepSortModel: /input/models/tracking/model_data/mars-small128.pb
+    sHumanDetectionModel: /input/models/tracking/model_data/yolov3.h5
+    sAnchorsPath: /input/models/tracking/model_data/yolo_anchors.txt
+    sYoloClassesPath: /input/models/tracking/model_data/coco_classes.txt
+    sHumanDetectionModelTiny: /input/models/tracking/model_data/yolov3_tiny.h5
+    sAnchorsPathTiny: /input/models/tracking/model_data/yolov3_tiny_anchors.txt
+    iYoloImageWidth: 416
+    iYoloImageHeight: 416
+DispOnFrame:
+    bDispImgResults: no
+    bDispFaceBbox: no
+    bDispFaceLandmark: no
+    bDispTracks: no
+    bDispHumanBbox: no
+    bDispAgeGender: no
+OtherModules:
+    sServerCert: apps/HA_cert.crt
+    sHAPostUrl: https://192.168.5.124/face_accesses
