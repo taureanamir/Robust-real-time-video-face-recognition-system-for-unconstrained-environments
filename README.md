@@ -3,17 +3,18 @@
 This repo contains the implementation of my paper entitled **Robust real-time video face recognition system for unconstrained environments**. This is an end to end robust face recognition system which can be used for real-time video face recognition. A novel frontal face detection measure is used which reduces the false positive recognitions by quite a margin.
 
 We use a simple calculation based on the fiducial points of the two eyes and the nose to determine if a given face is frontal. The frontal face measure F is shown in the equation below. Consider the triangle LRN consisting of the left eye (L), right eye (R), and tip of the nose (N). MTCNN aligns the face so that R and L lie on the same row using a 2D affine transformation. We then calculate the point M on LR directly above N, then the frontalness of the face is the ratio
-![](./images/equation.png)
+
+<img src="./images/equation.png" width="180" height="50">
 
 F = 0 means that the face is fully frontal, as in a mugshot, whereas F ≥ 1 means that the face is approximately in left or right profile. Given τ is a threshold value, any face with F < τ is considered a frontal face.
 
 
 Figure 1 represents the overall flow of the system.
-![Flow diagram of the system.](./images/flow-diagram.png)
+
+<img src="./images/flow-diagram.png" width="350" height="750">
 
 Figure 2 shows different components used in the system. This repo contains the code for the face recognition analytic component only.
-![Components of the system.](./images/components.png)
-
+<img src="./images/components.png" width="500" height="300">
 
 Follow the [paper](https://spie.org/Publications/Proceedings/Paper/10.1117/12.2625989?SSO=1) for more details.
 
