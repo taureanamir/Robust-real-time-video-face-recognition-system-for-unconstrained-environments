@@ -63,7 +63,7 @@ $ python3 main.py
 If you found this code useful, please cite our paper:
 
 ``` js
-Rajak, Amir, Matthew N.Dailey, and Mongkol Ekpanyapong.
+Rajak, Amir, Matthew N. Dailey, and Mongkol Ekpanyapong.
 "Robust real-time video face recognition system for unconstrained environments."
 International Workshop on Advanced Imaging Technology(IWAIT) 2022. Vol.12177. SPIE, 2022.
 ```
