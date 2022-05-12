@@ -27,10 +27,10 @@ Follow the [paper](https://spie.org/Publications/Proceedings/Paper/10.1117/12.26
 - OpenCV 3.4.2
 
 ## Other modules
-- MTCNN for face detection
-- FaceNet model for Face Recognition
-- YoloV3 for human detection
-- DeepSORT for human tracking
+- [MTCNN](https://github.com/ipazc/mtcnn) for face detection
+- [FaceNet](https://github.com/davidsandberg/facenet) model for Face Recognition
+- [YoloV3](https://github.com/pjreddie/darknet/tree/yolov3) for human detection
+- [DeepSORT](https://github.com/nwojke/deep_sort) for human tracking
 
 A SVM classifier for face recogntion needs to be trained on your dataset. Follow [this link](https://github.com/davidsandberg/facenet/wiki/Train-a-classifier-on-own-images) to train your classifier using FaceNet. Replace the **sFaceClassifierModel** key in the config file ```software/input/config/config.yaml```
 
