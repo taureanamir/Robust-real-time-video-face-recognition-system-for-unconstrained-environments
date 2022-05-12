@@ -25,6 +25,8 @@ Follow the [paper](https://spie.org/Publications/Proceedings/Paper/10.1117/12.26
 - python3
 - Tensorflow GPU 1.13.1
 - OpenCV 3.4.2
+- numpy 1.16.0
+- scipy 1.2.1
 
 ## Other modules
 - [MTCNN](https://github.com/ipazc/mtcnn) for face detection
@@ -39,7 +41,7 @@ A SVM classifier for face recogntion needs to be trained on your dataset. Follow
 
 All the configurations are handled in ```software/input/config/config.yaml``` configuration file.
 
-## Install dependencies
+## How to use the code
 ```
 ## To download required models
 $ sh install/01-download-models.sh
@@ -57,8 +59,14 @@ $ pip3 install -r requirements.txt
 $ python3 main.py
 ```
 
-## Acknowledgements 🙏
-Please cite the paper as mentioned below if you find this implementation helpful.
+## Reference
+If you found this code useful, please cite our paper:
+
+``` js
+Rajak, Amir, Matthew N.Dailey, and Mongkol Ekpanyapong.
+"Robust real-time video face recognition system for unconstrained environments."
+International Workshop on Advanced Imaging Technology(IWAIT) 2022. Vol.12177. SPIE, 2022.
+```
 
 ```
 @inproceedings{rajak2022robust,
