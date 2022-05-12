@@ -14,6 +14,7 @@ Figure 1 represents the overall flow of the system.
 <img src="./images/flow-diagram.png" width="350" height="750">
 
 Figure 2 shows different components used in the system. This repo contains the code for the face recognition analytic component only.
+
 <img src="./images/components.png" width="500" height="300">
 
 Follow the [paper](https://spie.org/Publications/Proceedings/Paper/10.1117/12.2625989?SSO=1) for more details.
